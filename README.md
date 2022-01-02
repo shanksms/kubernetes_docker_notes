@@ -23,3 +23,13 @@ ECS is a competitor of EKS. EKS is built on Kubernetes
 With EKS you have two options of running container applications:
 1. with EC2 fleet of machines
 2. with Fargate
+
+#### EKS + EC2
+In this style, AWS creates and manages control plane (which contains the master nodes). You have to provision EC2 instances and then connect them to EKS. worker nodes are then started on EC2 machines. 
+
+#### EKS + Fargate
+Fargate is a serverless way of running your containers. In this you ask AWS to run your containers. AWS internally provisions EC2 machines, creates worker nodes and runs your containers on worker nodes.
+<br>
+So, in short, in EKS with EC2, AWS only provisions control plane (master node). in EKS with Fargate, AWS provisions both control plane and workder nodes
+for details watch the video "AWS ECS/EKS with EC2 and FarGate". link is mentioned above.
+
